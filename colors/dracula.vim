@@ -203,13 +203,15 @@ call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
 
 if g:dracula_high_contrast_diff
   call s:h('DraculaDiffChange', s:yellow, s:purple)
-  call s:h('DraculaDiffDelete', s:bgdark, s:red)
+  call s:h('DraculaDiffDelete', s:bg, s:red)
+  call s:h('DraculaDiffAdded', s:bg, s:green)
+  call s:h('DraculaDiffText', s:bg, s:orange)
 else
   call s:h('DraculaDiffChange', s:orange, s:none)
   call s:h('DraculaDiffDelete', s:red, s:bgdark)
+  call s:h('DraculaDiffAdded', s:green)
+  call s:h('DraculaDiffText', s:bg, s:orange)
 endif
-
-call s:h('DraculaDiffText', s:bg, s:orange)
 
 " }}}2
 
@@ -230,7 +232,7 @@ call s:h('CursorLine', s:none, s:subtle)
 hi! link ColorColumn  DraculaBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link DiffAdd      DraculaDiffAdded
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   DraculaDiffChange
 hi! link DiffDelete   DraculaDiffDelete

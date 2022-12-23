@@ -45,10 +45,12 @@ let s:subtle    = g:dracula#palette.subtle
 
 let s:cyan      = g:dracula#palette.cyan
 let s:green     = g:dracula#palette.green
+let s:seagreen  = g:dracula#palette.seagreen
 let s:orange    = g:dracula#palette.orange
 let s:pink      = g:dracula#palette.pink
 let s:purple    = g:dracula#palette.purple
 let s:red       = g:dracula#palette.red
+let s:darkred   = g:dracula#palette.darkred
 let s:yellow    = g:dracula#palette.yellow
 
 let s:none      = ['NONE', 'NONE']
@@ -203,16 +205,15 @@ call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
 
 if g:dracula_high_contrast_diff
   call s:h('DraculaDiffChange', s:yellow, s:purple)
-  call s:h('DraculaDiffDelete', s:bg, s:red)
-  call s:h('DraculaDiffAdded', s:bg, s:green)
+  call s:h('DraculaDiffAdded', s:bg, s:seagreen)
+  call s:h('DraculaDiffDelete', s:bg, s:darkred)
   call s:h('DraculaDiffText', s:bg, s:orange)
 else
   call s:h('DraculaDiffChange', s:orange, s:none)
-  call s:h('DraculaDiffDelete', s:red, s:bgdark)
   call s:h('DraculaDiffAdded', s:green)
+  call s:h('DraculaDiffDelete', s:red, s:bgdark)
   call s:h('DraculaDiffText', s:bg, s:orange)
 endif
-
 " }}}2
 
 " }}}

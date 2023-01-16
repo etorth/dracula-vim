@@ -207,7 +207,7 @@ if g:dracula_high_contrast_diff
   call s:h('DraculaDiffChange', s:yellow, s:purple)
   call s:h('DraculaDiffAdded', s:bgdarker, s:seagreen)
   call s:h('DraculaDiffDelete', s:red, s:bgdarker)
-  call s:h('DraculaDiffText', s:bg, s:orange)
+  call s:h('DraculaDiffText', s:bg, s:orange, [s:attrs.bold])
 else
   call s:h('DraculaDiffChange', s:orange, s:none)
   call s:h('DraculaDiffAdded', s:green)
